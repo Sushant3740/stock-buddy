@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML video Tag</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+        <div class="slider-container">
+            <div class="slide">
+                <video autoplay loop muted>
+                    <source src="img Video/video1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="loader"></div>
+            <div class="slide">
+                <video autoplay loop muted>
+                    <source src="img Video/video2.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="slide">
+                <video autoplay loop muted>
+                    <source src="img Video/video3.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="slide">
+                <video autoplay loop muted>
+                    <source src="img Video/video4.mp4" type="video/mp4">
+                </video>
+            </div>
+        <div class="slide">
+            <video autoplay loop muted>
+                <source src="img Video/video5.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="slide">
+            <video autoplay loop muted>
+                <source src="img Video/video7.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="slide">
+            <video autoplay loop muted>
+                <source src="img Video/video8.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="slide">
+            <video autoplay loop muted>
+                <source src="img Video/video8.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="slide">
+            <video autoplay loop muted>
+                <source src="img Video/video1.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="nav">
+            <nav>
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="http://localhost/main/about/about.html">About</a></li>
+                  <li><a href="http://localhost/main/booking/index.html">Bookings</a></li>
+                  <li><a href="http://localhost/main/destinetions/">Destinetion</a></li>
+                  <li><a href="http://localhost/main/contact%20us/index.html">Contact</a></li>
+                  <li><a href="http://localhost/main/Adminlogin/login.html">Admin</a></li>
+                </ul>
+              </nav>
+        </div>
+        <h1 class="title">TOURISM</h1>
+    </div>
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.style.opacity = 1;
+                } else {
+            slide.style.opacity = 0;
+        }
+    });
+}
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+    
+}
+setInterval(nextSlide, 5000);
+</script>
+</body>
+</html>
